@@ -21,11 +21,15 @@ public class ValorDoS {
             }
             double termo = (dividendo / divisor);
             System.out.println("termo:" + termo);
+            // if (expoente % 2 == 0) {
+            // s = s - termo;
+            // } else {
+            // s = s + termo;
+            // }
             if (expoente % 2 == 0) {
-                s = s - termo;
-            } else {
-                s = s + termo;
+                termo *= -1;
             }
+            s += termo;
         }
         System.out.println(s);
         leitor.close();
