@@ -14,5 +14,6 @@ public class EFatorial {
             e = e + (1 / fatorial);
         }
         System.out.println(e);
+        sc.close();
     }
 }
