@@ -3,6 +3,7 @@ métodos que lhe pareçam razoáveis. Os dois atributos devem ser encapsulados.
 Escreva métodos getters/setters para cada um deles.*/
 
 public class Carro {
+
     private String cor;
     private String marca;
     private String modelo;
@@ -23,7 +24,9 @@ public class Carro {
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+        if (!modelo.isBlank()) {
+            this.modelo = modelo;
+        }
     }
 
     public String getMarca() {
