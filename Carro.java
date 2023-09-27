@@ -13,6 +13,10 @@ public class Carro {
         this.modelo = modelo;
     }
 
+    public String toString() {
+        return "Marca: " + marca + ", modelo: " + modelo + ", cor: " + cor;
+    }
+
     public Carro(String modelo, String marca, String cor) {
         this.modelo = modelo;
         this.marca = marca;
