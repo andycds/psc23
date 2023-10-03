@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -30,6 +31,17 @@ public class GerenciadorAlunos extends JFrame {
         senha.setFont(font);
         painel.add(criarBotaoCancelar());
         JButton ok = new JButton("ok");
+        ok.addActionListener(acao -> {
+            if (login.getText().equals("root") &&
+                    senha.getText().equals("51")) {
+                CrudAluno ca = new CrudAluno();
+                ca.desenhar();
+                setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(this, "Login ou senha errado");
+            }
+
+        });
         painel.add(ok);
         ok.setFont(font);
         this.setVisible(true);
